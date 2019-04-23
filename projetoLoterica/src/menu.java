@@ -48,9 +48,7 @@ public class menu extends javax.swing.JFrame {
         desktop = new javax.swing.JDesktopPane();
         jSeparator2 = new javax.swing.JSeparator();
         btTela = new javax.swing.JButton();
-        btVendas = new javax.swing.JButton();
         btCadUsuario = new javax.swing.JButton();
-        tbBemVindos = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Dita Livros");
@@ -63,7 +61,6 @@ public class menu extends javax.swing.JFrame {
             }
         });
 
-        btLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/patinha.png"))); // NOI18N
         btLogin.setText("Login");
         btLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,24 +79,15 @@ public class menu extends javax.swing.JFrame {
         desktopLayout.setVerticalGroup(
             desktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, desktopLayout.createSequentialGroup()
-                .addContainerGap(641, Short.MAX_VALUE)
+                .addContainerGap(636, Short.MAX_VALUE)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26))
         );
 
-        btTela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/gato livro22.png"))); // NOI18N
-        btTela.setText("Livros");
+        btTela.setText("Fechamento caixa");
         btTela.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btTelaActionPerformed(evt);
-            }
-        });
-
-        btVendas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/CESTA.png"))); // NOI18N
-        btVendas.setText("Vendas");
-        btVendas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVendasActionPerformed(evt);
             }
         });
 
@@ -110,9 +98,6 @@ public class menu extends javax.swing.JFrame {
             }
         });
 
-        tbBemVindos.setFont(new java.awt.Font("Yu Gothic", 0, 14)); // NOI18N
-        tbBemVindos.setText("BEM VINDO(A)");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -120,16 +105,12 @@ public class menu extends javax.swing.JFrame {
             .addComponent(jSeparator1)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btTela, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btVendas, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                .addComponent(tbBemVindos, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addComponent(btTela, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
                 .addComponent(btCadUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 238, Short.MAX_VALUE)
                 .addComponent(btLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(92, 92, 92))
             .addComponent(desktop, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         layout.setVerticalGroup(
@@ -137,11 +118,9 @@ public class menu extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btTela, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btVendas, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tbBemVindos)
-                    .addComponent(btLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btCadUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(btCadUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(desktop)
@@ -153,17 +132,17 @@ public class menu extends javax.swing.JFrame {
 
     
     private void btLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLoginActionPerformed
-login lo = new login();
-desktop.add(lo);
-lo.setVisible(true);
-try {
-lo.setMaximum(true);
-lo.setSelected(true);
-} catch (Exception e2) {
-e2.printStackTrace();
-}
-btTela.setEnabled(false);
-btVendas.setEnabled(false);
+//login lo = new login();
+//desktop.add(lo);
+//lo.setVisible(true);
+//try {
+//lo.setMaximum(true);
+//lo.setSelected(true);
+//} catch (Exception e2) {
+//e2.printStackTrace();
+//}
+btTela.setEnabled(true);
+//btVendas.setEnabled(false);
 btCadUsuario.setVisible(false);
 btLogin.setEnabled(false);
 
@@ -172,7 +151,7 @@ btLogin.setEnabled(false);
     }//GEN-LAST:event_btLoginActionPerformed
 
     private void btTelaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btTelaActionPerformed
-livros te = new livros();
+retiradaCaixa te = new retiradaCaixa();
 desktop.add(te);
 te.setVisible(true);
 try {
@@ -191,21 +170,6 @@ e2.printStackTrace();
 
     }//GEN-LAST:event_formWindowActivated
 
-    private void btVendasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVendasActionPerformed
-        vendasTela ve = new vendasTela();
-desktop.add(ve);
-ve.setVisible(true);
-try {
-
-//ve.setSize(d.width-12, d.height-130);
-//ve.setMaximum(true);
-ve.setSelected(true);
-} catch (Exception e2) {
-e2.printStackTrace();
-}
-
-    }//GEN-LAST:event_btVendasActionPerformed
-
     private void btCadUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadUsuarioActionPerformed
 cadastroUsuario cadUsuario = new cadastroUsuario();
 desktop.add(cadUsuario);
@@ -213,18 +177,18 @@ cadUsuario.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_btCadUsuarioActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-login lo = new login();
-desktop.add(lo);
-lo.setVisible(true);
-try {
-lo.setMaximum(true);
-lo.setSelected(true);
-} catch (Exception e2) {
-e2.printStackTrace();
-}
+//login lo = new login();
+//desktop.add(lo);
+//lo.setVisible(true);
+//try {
+//lo.setMaximum(true);
+//lo.setSelected(true);
+//} catch (Exception e2) {
+//e2.printStackTrace();
+//}
 btLogin.setEnabled(false);
-btTela.setEnabled(false);
-btVendas.setEnabled(false);
+btTela.setEnabled(true);
+//btVendas.setEnabled(false);
 btCadUsuario.setVisible(false);        
 // TODO add your handling code here:
     }//GEN-LAST:event_formWindowOpened
@@ -264,10 +228,8 @@ btCadUsuario.setVisible(false);
     public static javax.swing.JButton btCadUsuario;
     public static javax.swing.JButton btLogin;
     public static javax.swing.JButton btTela;
-    public static javax.swing.JButton btVendas;
     public static javax.swing.JDesktopPane desktop;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    public static javax.swing.JLabel tbBemVindos;
     // End of variables declaration//GEN-END:variables
 }

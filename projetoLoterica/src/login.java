@@ -27,7 +27,6 @@ public class login extends javax.swing.JInternalFrame {
 
         btLogar = new javax.swing.JButton();
         tbSenha = new javax.swing.JPasswordField();
-        jLabel15 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         tbUsuario = new javax.swing.JTextField();
@@ -41,11 +40,9 @@ public class login extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/gato livros LOGO.png"))); // NOI18N
-
         jLabel14.setText("SENHA:");
 
-        jLabel13.setText("CPF:");
+        jLabel13.setText("LOGIN:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -54,25 +51,21 @@ public class login extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(205, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel13)
-                                .addComponent(jLabel14))
-                            .addGap(18, 18, 18)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(tbSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(tbUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel14))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(tbSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tbUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(btLogar, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(318, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(73, 73, 73)
-                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(283, 283, 283)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
                     .addComponent(tbUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -82,7 +75,7 @@ public class login extends javax.swing.JInternalFrame {
                     .addComponent(tbSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btLogar)
-                .addContainerGap(142, Short.MAX_VALUE))
+                .addContainerGap(146, Short.MAX_VALUE))
         );
 
         pack();
@@ -93,58 +86,61 @@ public class login extends javax.swing.JInternalFrame {
         String usuario;
         String senha;
         
-        login lo = new login();
-        
-        
-        if (!(tbUsuario.getText().equals(""))) {
-            
-            try {
-                BDusuario bd = new BDusuario();
-                pr = bd.procurarUsuario(tbUsuario.getText());
-                if (pr != null) {
-                    
-                    usuario = tbUsuario.getText();
-                    senha = tbSenha.getText();
-                    
-                    if (senha.equals(pr.getSenha()) & usuario.equals(pr.getUsuario())) {
-                        
-                        if(pr.isTrocaSenha() == true){
-                            this.dispose();
-                            JOptionPane.showMessageDialog(null, "trocar");
-                            trocarSenha ts = new trocarSenha();
-                            menu.desktop.add(ts);
-                            ts.setVisible(true);
-                            trocarSenha.lbTrocaSenhaUsuario.setText(tbUsuario.getText());
-                                                       
-                        }else{
-                        if ("326".equals(pr.getUsuario())) {
-                            menu.btCadUsuario.setVisible(true);
-                        }
-                        menu.btTela.setEnabled(true);
-                        menu.btVendas.setEnabled(true);
-                        
-                        }   
-                    } else {
-                        JOptionPane.showMessageDialog(null, "login ou senha invalidos ");
-                    }
-                    
-                } else {
-                    JOptionPane.showMessageDialog(null, "login ou senha invalidos");
-                    
-                }
-                menu.tbBemVindos.setText("Bem Vindo(a) " + pr.getNome()); 
-            } catch (SQLException ex) {
-            }
-           
-        }
-        
-        tbUsuario.setText("");
-        tbSenha.setText("");
-        menu.btLogin.setEnabled(true);
+         
+//        login lo = new login();
+//        
+//        
+//        if (!(tbUsuario.getText().equals(""))) {
+//            
+//            try {
+//                BDusuario bd = new BDusuario();
+//                pr = bd.procurarUsuario(tbUsuario.getText());
+//                if (pr != null) {
+//                    
+//                    usuario = tbUsuario.getText();
+//                    senha = tbSenha.getText();
+//                    
+//                    if (senha.equals(pr.getSenha()) & usuario.equals(pr.getUsuario())) {
+//                        
+//                        if(pr.isTrocaSenha() == true){
+//                            this.dispose();
+//                            JOptionPane.showMessageDialog(null, "trocar");
+//                            trocarSenha ts = new trocarSenha();
+//                            menu.desktop.add(ts);
+//                            ts.setVisible(true);
+//                            trocarSenha.lbTrocaSenhaUsuario.setText(tbUsuario.getText());
+//                                                       
+//                        }else{
+//                        if ("326".equals(pr.getUsuario())) {
+//                            menu.btCadUsuario.setVisible(true);
+//                        }
+//                        menu.btTela.setEnabled(true);
+//                        menu.btVendas.setEnabled(true);
+//                        
+//                        }   
+//                    } else {
+//                        JOptionPane.showMessageDialog(null, "login ou senha invalidos ");
+//                    }
+//                    
+//                } else {
+//                    JOptionPane.showMessageDialog(null, "login ou senha invalidos");
+//                    
+//                }
+//                menu.tbBemVindos.setText("Bem Vindo(a) " + pr.getNome()); 
+//            } catch (SQLException ex) {
+//            }
+//           
+//        }
+//        
+//        tbUsuario.setText("");
+//        tbSenha.setText("");
+//        menu.btLogin.setEnabled(true);
         this.dispose();
 
         //        tela.setVisible(true);
         //        login.setVisible(false);
+        menu.btLogin.setEnabled(true);
+        menu.btTela.setEnabled(true);
     }//GEN-LAST:event_btLogarActionPerformed
 
 
@@ -152,7 +148,6 @@ public class login extends javax.swing.JInternalFrame {
     private javax.swing.JButton btLogar;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JPasswordField tbSenha;
     private javax.swing.JTextField tbUsuario;
     // End of variables declaration//GEN-END:variables
