@@ -151,7 +151,7 @@ btLogin.setEnabled(false);
     }//GEN-LAST:event_btLoginActionPerformed
 
     private void btTelaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btTelaActionPerformed
-retiradaCaixa te = new retiradaCaixa();
+selecao te = new selecao();
 desktop.add(te);
 te.setVisible(true);
 try {
