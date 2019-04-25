@@ -22,21 +22,16 @@ import javax.swing.text.PlainDocument;
  *
  * @author rnsilva
  */
-public class retiradaCaixa1 extends javax.swing.JInternalFrame {
+public class retiradaCaixa11 extends javax.swing.JInternalFrame {
 
     int contador = 100;
     String texto = null;
     SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
     int contador2 = 0;
     double valorTotalDespesas = 0;
+    int subTotal=0;
     
-    
-    
-    
-    
-    
-    
-    
+
     public class DocumentoLimitado extends PlainDocument {
 
         private int tamanhoMax = 10;
@@ -62,17 +57,16 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
         }
     }
 
-    public retiradaCaixa1() {
-         initComponents();
+    public retiradaCaixa11() {
+        initComponents();
         camposBloqueados();
         habilitarBotoes(true, false, false, false, false, true);
         Date data = new Date();
         SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
         //JOptionPane.showMessageDialog(this, formatador.format( data ));
-        tbDataRetirada.setText(formatador.format( data ));
-   
-       
-        
+        tbDataRetirada.setText(formatador.format(data));
+        tbDataSelecao.setText(formatador.format(data));
+        abaConsulta.setVisible(false);
 
     }
 
@@ -160,6 +154,15 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel3 = new javax.swing.JPanel();
+        cbCaixaRetirada = new javax.swing.JComboBox<>();
+        cbFuncionariaRetirada = new javax.swing.JComboBox<>();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        tbDataSelecao = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        cbPeriodoRetirada = new javax.swing.JComboBox<>();
+        jButton4 = new javax.swing.JButton();
         abaConsulta = new javax.swing.JTabbedPane();
         PainelRetirada = new javax.swing.JScrollPane();
         retirada = new javax.swing.JPanel();
@@ -177,32 +180,32 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
         jLabel31 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
-        cemNova6 = new javax.swing.JTextField();
-        cemVelha6 = new javax.swing.JTextField();
+        p50nova = new javax.swing.JTextField();
+        p50usada = new javax.swing.JTextField();
         p20 = new javax.swing.JPanel();
         jLabel34 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
-        cemNova7 = new javax.swing.JTextField();
-        cemVelha7 = new javax.swing.JTextField();
+        p20nova = new javax.swing.JTextField();
+        p20usada = new javax.swing.JTextField();
         p10 = new javax.swing.JPanel();
         jLabel37 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
-        cemNova8 = new javax.swing.JTextField();
-        cemVelha8 = new javax.swing.JTextField();
+        p10nova = new javax.swing.JTextField();
+        p10usada = new javax.swing.JTextField();
         p05 = new javax.swing.JPanel();
         jLabel40 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
-        cemNova9 = new javax.swing.JTextField();
-        cemVelha9 = new javax.swing.JTextField();
+        p05nova = new javax.swing.JTextField();
+        p05usada = new javax.swing.JTextField();
         p02 = new javax.swing.JPanel();
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
-        cemNova10 = new javax.swing.JTextField();
-        cemVelha10 = new javax.swing.JTextField();
+        p02nova = new javax.swing.JTextField();
+        p02usada = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         lbSubtotal = new javax.swing.JLabel();
@@ -249,6 +252,83 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
         setResizable(true);
         setTitle("Retirada Caixa");
 
+        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        cbCaixaRetirada.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione um caixa", "Caixa 1", "Caixa 2", "Caixa 3", "Caixa 4" }));
+
+        cbFuncionariaRetirada.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione um(a) Funcionario(a)", "Fernanda", "Sonia", "Katia", "Arlene" }));
+
+        jLabel12.setText("Caixa");
+
+        jLabel13.setText("Funcionaria");
+
+        tbDataSelecao.setEditable(false);
+
+        jLabel14.setText("Periodo");
+
+        cbPeriodoRetirada.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione um periodo", "Manha(antes do carro forte)", "Tarde(sobra para o proximo dia)" }));
+
+        jButton4.setText("Acessar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(cbPeriodoRetirada, 0, 231, Short.MAX_VALUE)
+                            .addComponent(cbCaixaRetirada, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cbFuncionariaRetirada, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel13)
+                                    .addComponent(jLabel14))
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel12))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(84, 84, 84)
+                                .addComponent(tbDataSelecao, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(74, 74, 74)
+                .addComponent(jButton4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(tbDataSelecao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cbCaixaRetirada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cbFuncionariaRetirada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cbPeriodoRetirada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addComponent(jButton4)
+                .addContainerGap())
+        );
+
         btNovo.setText("Novo");
         btNovo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -279,6 +359,23 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
         jLabel21.setText("VELHA");
 
         p100Nova.setToolTipText("");
+        p100Nova.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                p100NovaFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                p100NovaFocusLost(evt);
+            }
+        });
+
+        p100Usada.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                p100UsadaFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                p100UsadaFocusLost(evt);
+            }
+        });
 
         javax.swing.GroupLayout p100Layout = new javax.swing.GroupLayout(p100);
         p100.setLayout(p100Layout);
@@ -318,7 +415,7 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
 
         jLabel33.setText("VELHA");
 
-        cemNova6.setToolTipText("");
+        p50nova.setToolTipText("");
 
         javax.swing.GroupLayout p50Layout = new javax.swing.GroupLayout(p50);
         p50.setLayout(p50Layout);
@@ -329,9 +426,9 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
                 .addGroup(p50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLabel31)
                     .addComponent(jLabel32)
-                    .addComponent(cemNova6, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(p50nova, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel33)
-                    .addComponent(cemVelha6, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(p50usada, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(41, Short.MAX_VALUE))
         );
         p50Layout.setVerticalGroup(
@@ -342,11 +439,11 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel32)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cemNova6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(p50nova, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel33)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cemVelha6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(p50usada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(19, 19, 19))
         );
 
@@ -358,7 +455,7 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
 
         jLabel36.setText("VELHA");
 
-        cemNova7.setToolTipText("");
+        p20nova.setToolTipText("");
 
         javax.swing.GroupLayout p20Layout = new javax.swing.GroupLayout(p20);
         p20.setLayout(p20Layout);
@@ -369,9 +466,9 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
                 .addGroup(p20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLabel34)
                     .addComponent(jLabel35)
-                    .addComponent(cemNova7, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(p20nova, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel36)
-                    .addComponent(cemVelha7, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(p20usada, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(41, Short.MAX_VALUE))
         );
         p20Layout.setVerticalGroup(
@@ -382,11 +479,11 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel35)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cemNova7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(p20nova, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel36)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cemVelha7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(p20usada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(19, 19, 19))
         );
 
@@ -398,7 +495,7 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
 
         jLabel39.setText("VELHA");
 
-        cemNova8.setToolTipText("");
+        p10nova.setToolTipText("");
 
         javax.swing.GroupLayout p10Layout = new javax.swing.GroupLayout(p10);
         p10.setLayout(p10Layout);
@@ -409,9 +506,9 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
                 .addGroup(p10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLabel37)
                     .addComponent(jLabel38)
-                    .addComponent(cemNova8, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(p10nova, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel39)
-                    .addComponent(cemVelha8, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(p10usada, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         p10Layout.setVerticalGroup(
@@ -422,11 +519,11 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel38)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cemNova8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(p10nova, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel39)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cemVelha8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(p10usada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(19, 19, 19))
         );
 
@@ -438,7 +535,7 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
 
         jLabel42.setText("VELHA");
 
-        cemNova9.setToolTipText("");
+        p05nova.setToolTipText("");
 
         javax.swing.GroupLayout p05Layout = new javax.swing.GroupLayout(p05);
         p05.setLayout(p05Layout);
@@ -449,9 +546,9 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
                 .addGroup(p05Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLabel40)
                     .addComponent(jLabel41)
-                    .addComponent(cemNova9, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(p05nova, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel42)
-                    .addComponent(cemVelha9, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(p05usada, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         p05Layout.setVerticalGroup(
@@ -462,11 +559,11 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel41)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cemNova9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(p05nova, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel42)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cemVelha9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(p05usada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(19, 19, 19))
         );
 
@@ -478,7 +575,7 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
 
         jLabel45.setText("VELHA");
 
-        cemNova10.setToolTipText("");
+        p02nova.setToolTipText("");
 
         javax.swing.GroupLayout p02Layout = new javax.swing.GroupLayout(p02);
         p02.setLayout(p02Layout);
@@ -489,9 +586,9 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
                 .addGroup(p02Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLabel43)
                     .addComponent(jLabel44)
-                    .addComponent(cemNova10, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(p02nova, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel45)
-                    .addComponent(cemVelha10, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(p02usada, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         p02Layout.setVerticalGroup(
@@ -502,11 +599,11 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel44)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cemNova10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(p02nova, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel45)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cemVelha10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(p02usada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(19, 19, 19))
         );
 
@@ -571,13 +668,6 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
 
         tb3.setEditable(false);
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -585,27 +675,6 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(tbDataRetirada, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel3)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel4)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(lbTotalCaixa, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(lbSubtotal, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel10)
@@ -613,11 +682,28 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
                             .addComponent(tb2)
                             .addComponent(tb3)
                             .addComponent(tb1, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE))
-                        .addGap(0, 0, Short.MAX_VALUE))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jButton1)
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(tbDataRetirada, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel3)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel4)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                                .addComponent(lbTotalCaixa, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel9)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbSubtotal, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap())))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -646,10 +732,15 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
                 .addComponent(jLabel11)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(tb3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jButton1.setText("Sair");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout retiradaLayout = new javax.swing.GroupLayout(retirada);
         retirada.setLayout(retiradaLayout);
@@ -658,18 +749,20 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
             .addGroup(retiradaLayout.createSequentialGroup()
                 .addGroup(retiradaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(retiradaLayout.createSequentialGroup()
-                        .addGap(41, 41, 41)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(retiradaLayout.createSequentialGroup()
                         .addGap(230, 230, 230)
                         .addComponent(btNovo, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btCancelar)))
-                .addGap(10, 10, 10))
+                        .addComponent(btCancelar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(retiradaLayout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
         retiradaLayout.setVerticalGroup(
             retiradaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -678,7 +771,8 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
                 .addGroup(retiradaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btNovo)
                     .addComponent(btSalvar)
-                    .addComponent(btCancelar))
+                    .addComponent(btCancelar)
+                    .addComponent(jButton1))
                 .addGap(15, 15, 15)
                 .addGroup(retiradaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -918,7 +1012,7 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
                     .addGroup(consultaLayout.createSequentialGroup()
                         .addGap(176, 176, 176)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                .addGap(586, 586, 586))
         );
         consultaLayout.setVerticalGroup(
             consultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -942,13 +1036,23 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addComponent(abaConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 763, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(265, 265, 265)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(265, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(15, Short.MAX_VALUE)
                 .addComponent(abaConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 555, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(159, 159, 159)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(160, 160, 160)))
         );
 
         abaConsulta.getAccessibleContext().setAccessibleName("Despesas");
@@ -1019,6 +1123,8 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btNovoActionPerformed
 
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
+
+
 //        Produto pr;
 //        if (!(tbIsbn.getText().equals("")) & !(tbAno.getText().equals(""))
 //                & !(tbValor.getText().equals("")) & !(tbQuantidade.getText().equals(""))) {
@@ -1142,11 +1248,93 @@ public class retiradaCaixa1 extends javax.swing.JInternalFrame {
 // TODO add your handling code here:
     }//GEN-LAST:event_tbOutrosDespesasPropertyChange
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+
+//        if (!(cbCaixaRetirada.getSelectedItem().equals("Selecione um caixa"))
+//                & !(cbFuncionariaRetirada.getSelectedItem().equals("Selecione um(a) Funcionario(a)"))
+//                & !(cbPeriodoRetirada.getSelectedItem().equals("Selecione um periodo"))) {
+//            tb1.setText(cbCaixaRetirada.getItemAt(cbCaixaRetirada.getSelectedIndex()));
+//            tb2.setText(cbFuncionariaRetirada.getItemAt(cbFuncionariaRetirada.getSelectedIndex()));
+//            tb3.setText(cbPeriodoRetirada.getItemAt(cbPeriodoRetirada.getSelectedIndex()));
+//
+//            jPanel3.setVisible(false);
+//            abaConsulta.setVisible(true);
+//
+//        } else {
+//            JOptionPane.showMessageDialog(this,
+//                    "Favor selecionar: "
+//                    + "\n" + "Um caixa"
+//                    + "\n" + "Um(a) Funcionario(a)"
+//                    + "\n" + "Um Periodo");
+//        }
+        
+tb1.setText(cbCaixaRetirada.getItemAt(cbCaixaRetirada.getSelectedIndex()));
+            tb2.setText(cbFuncionariaRetirada.getItemAt(cbFuncionariaRetirada.getSelectedIndex()));
+            tb3.setText(cbPeriodoRetirada.getItemAt(cbPeriodoRetirada.getSelectedIndex()));
+
+            jPanel3.setVisible(false);
+            abaConsulta.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-selecao se = new selecao();
-JOptionPane.showMessageDialog(null, se.cbCaixaRetirada.getSelectedIndex());
-        // TODO add your handling code here:
+        jPanel3.setVisible(true);
+        abaConsulta.setVisible(false);
+        cbCaixaRetirada.setSelectedItem("Selecione um caixa");
+        cbFuncionariaRetirada.setSelectedItem("Selecione um(a) Funcionario(a)");
+        cbPeriodoRetirada.setSelectedItem("Selecione um periodo");
+
+        p100Nova.setText("");
+        p100Usada.setText("");
+        p50nova.setText("");
+        p50usada.setText("");
+        p10nova.setText("");
+        p10usada.setText("");
+        p20nova.setText("");
+        p20usada.setText("");
+        p10nova.setText("");
+        p10usada.setText("");
+        p05nova.setText("");
+        p05usada.setText("");
+        p02nova.setText("");
+        p02usada.setText("");
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void p100NovaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p100NovaFocusLost
+int p100n = Integer.valueOf(p100Nova.getText());
+
+subTotal = subTotal + p100n*100;
+//p100Nova.setEnabled(false);
+lbSubtotal.setText(String.valueOf(subTotal));
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_p100NovaFocusLost
+
+    private void p100UsadaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p100UsadaFocusLost
+int p100u = Integer.valueOf(p100Usada.getText());
+
+subTotal = subTotal + p100u*100;
+lbSubtotal.setText(String.valueOf(subTotal));
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_p100UsadaFocusLost
+
+    private void p100NovaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p100NovaFocusGained
+       int p100n = Integer.valueOf(p100Nova.getText());
+
+subTotal = subTotal - p100n*100;
+//p100Nova.setEnabled(false);
+lbSubtotal.setText(String.valueOf(subTotal));
+// TODO add your handling code here:
+    }//GEN-LAST:event_p100NovaFocusGained
+
+    private void p100UsadaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p100UsadaFocusGained
+int p100u = Integer.valueOf(p100Usada.getText());
+
+subTotal = subTotal - p100u*100;
+lbSubtotal.setText(String.valueOf(subTotal));        // TODO add your handling code here:
+    }//GEN-LAST:event_p100UsadaFocusGained
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1161,25 +1349,22 @@ JOptionPane.showMessageDialog(null, se.cbCaixaRetirada.getSelectedIndex());
     private javax.swing.JButton btNovo1;
     private javax.swing.JButton btSalvar;
     private javax.swing.JButton btSalvar1;
+    public javax.swing.JComboBox<String> cbCaixaRetirada;
     private javax.swing.JComboBox<String> cbDespesas;
-    private javax.swing.JTextField cemNova10;
-    private javax.swing.JTextField cemNova6;
-    private javax.swing.JTextField cemNova7;
-    private javax.swing.JTextField cemNova8;
-    private javax.swing.JTextField cemNova9;
-    private javax.swing.JTextField cemVelha10;
-    private javax.swing.JTextField cemVelha6;
-    private javax.swing.JTextField cemVelha7;
-    private javax.swing.JTextField cemVelha8;
-    private javax.swing.JTextField cemVelha9;
+    private javax.swing.JComboBox<String> cbFuncionariaRetirada;
+    private javax.swing.JComboBox<String> cbPeriodoRetirada;
     private javax.swing.JPanel consulta;
     private javax.swing.JScrollPane despesas;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
@@ -1208,6 +1393,7 @@ JOptionPane.showMessageDialog(null, se.cbCaixaRetirada.getSelectedIndex());
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
@@ -1215,19 +1401,30 @@ JOptionPane.showMessageDialog(null, se.cbCaixaRetirada.getSelectedIndex());
     private javax.swing.JLabel lbTotalCaixa;
     private javax.swing.JPanel menu;
     private javax.swing.JPanel p02;
+    private javax.swing.JTextField p02nova;
+    private javax.swing.JTextField p02usada;
     private javax.swing.JPanel p05;
+    private javax.swing.JTextField p05nova;
+    private javax.swing.JTextField p05usada;
     private javax.swing.JPanel p10;
     private javax.swing.JPanel p100;
     private javax.swing.JTextField p100Nova;
     private javax.swing.JTextField p100Usada;
+    private javax.swing.JTextField p10nova;
+    private javax.swing.JTextField p10usada;
     private javax.swing.JPanel p20;
+    private javax.swing.JTextField p20nova;
+    private javax.swing.JTextField p20usada;
     private javax.swing.JPanel p50;
+    private javax.swing.JTextField p50nova;
+    private javax.swing.JTextField p50usada;
     private javax.swing.JPanel retirada;
-    public javax.swing.JTextField tb1;
+    private javax.swing.JTextField tb1;
     private javax.swing.JTextField tb2;
     private javax.swing.JTextField tb3;
     private javax.swing.JButton tbAdicionarDespesas;
     private javax.swing.JTextField tbDataRetirada;
+    private javax.swing.JTextField tbDataSelecao;
     private javax.swing.JTextField tbOutrosDespesas;
     private javax.swing.JTextField tbValorDespesas;
     private javax.swing.JTextField tfConsulta2;

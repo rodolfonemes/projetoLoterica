@@ -31,19 +31,187 @@
               <Component id="abaConsulta" min="-2" pref="763" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="265" max="-2" attributes="0"/>
+                  <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="265" max="32767" attributes="0"/>
+              </Group>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="15" max="32767" attributes="0"/>
               <Component id="abaConsulta" min="-2" pref="555" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
+          </Group>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace min="-2" pref="159" max="-2" attributes="0"/>
+                  <Component id="jPanel3" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="160" max="-2" attributes="0"/>
+              </Group>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel3">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="cbPeriodoRetirada" alignment="1" pref="231" max="32767" attributes="0"/>
+                              <Component id="cbCaixaRetirada" alignment="0" max="32767" attributes="0"/>
+                              <Component id="cbFuncionariaRetirada" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
+                                  <Component id="tbDataSelecao" min="-2" pref="82" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+                  <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                  <Component id="tbDataSelecao" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="cbCaixaRetirada" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="cbFuncionariaRetirada" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="cbPeriodoRetirada" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="22" max="32767" attributes="0"/>
+                  <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JComboBox" name="cbCaixaRetirada">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="5">
+                <StringItem index="0" value="Selecione um caixa"/>
+                <StringItem index="1" value="Caixa 1"/>
+                <StringItem index="2" value="Caixa 2"/>
+                <StringItem index="3" value="Caixa 3"/>
+                <StringItem index="4" value="Caixa 4"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="cbFuncionariaRetirada">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="5">
+                <StringItem index="0" value="Selecione um(a) Funcionario(a)"/>
+                <StringItem index="1" value="Fernanda"/>
+                <StringItem index="2" value="Sonia"/>
+                <StringItem index="3" value="Katia"/>
+                <StringItem index="4" value="Arlene"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel12">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Caixa"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel13">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Funcionaria"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="tbDataSelecao">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel14">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Periodo"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="cbPeriodoRetirada">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="3">
+                <StringItem index="0" value="Selecione um periodo"/>
+                <StringItem index="1" value="Manha(antes do carro forte)"/>
+                <StringItem index="2" value="Tarde(sobra para o proximo dia)"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Acessar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
     <Container class="javax.swing.JTabbedPane" name="abaConsulta">
       <AccessibilityProperties>
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Despesas"/>
@@ -69,22 +237,24 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                                  <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
+                              <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="230" max="-2" attributes="0"/>
                                   <Component id="btNovo" min="-2" pref="73" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="btSalvar" min="-2" pref="73" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="btCancelar" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jButton1" min="-2" pref="64" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                                  <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                          <EmptySpace pref="44" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -96,6 +266,7 @@
                               <Component id="btNovo" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btSalvar" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -238,8 +409,16 @@
                           <Properties>
                             <Property name="toolTipText" type="java.lang.String" value=""/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="p100NovaFocusGained"/>
+                            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="p100NovaFocusLost"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JTextField" name="p100Usada">
+                          <Events>
+                            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="p100UsadaFocusGained"/>
+                            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="p100UsadaFocusLost"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -260,9 +439,9 @@
                                   <Group type="103" groupAlignment="2" attributes="0">
                                       <Component id="jLabel31" alignment="2" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel32" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="cemNova6" alignment="2" min="-2" pref="59" max="-2" attributes="0"/>
+                                      <Component id="p50nova" alignment="2" min="-2" pref="59" max="-2" attributes="0"/>
                                       <Component id="jLabel33" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="cemVelha6" alignment="2" min="-2" pref="66" max="-2" attributes="0"/>
+                                      <Component id="p50usada" alignment="2" min="-2" pref="66" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace pref="41" max="32767" attributes="0"/>
                               </Group>
@@ -276,11 +455,11 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jLabel32" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="cemNova6" min="-2" max="-2" attributes="0"/>
+                                  <Component id="p50nova" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="cemVelha6" min="-2" max="-2" attributes="0"/>
+                                  <Component id="p50usada" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -302,12 +481,12 @@
                             <Property name="text" type="java.lang.String" value="VELHA"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="cemNova6">
+                        <Component class="javax.swing.JTextField" name="p50nova">
                           <Properties>
                             <Property name="toolTipText" type="java.lang.String" value=""/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="cemVelha6">
+                        <Component class="javax.swing.JTextField" name="p50usada">
                         </Component>
                       </SubComponents>
                     </Container>
@@ -328,9 +507,9 @@
                                   <Group type="103" groupAlignment="2" attributes="0">
                                       <Component id="jLabel34" alignment="2" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel35" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="cemNova7" alignment="2" min="-2" pref="59" max="-2" attributes="0"/>
+                                      <Component id="p20nova" alignment="2" min="-2" pref="59" max="-2" attributes="0"/>
                                       <Component id="jLabel36" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="cemVelha7" alignment="2" min="-2" pref="66" max="-2" attributes="0"/>
+                                      <Component id="p20usada" alignment="2" min="-2" pref="66" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace pref="41" max="32767" attributes="0"/>
                               </Group>
@@ -344,11 +523,11 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jLabel35" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="cemNova7" min="-2" max="-2" attributes="0"/>
+                                  <Component id="p20nova" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="jLabel36" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="cemVelha7" min="-2" max="-2" attributes="0"/>
+                                  <Component id="p20usada" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -370,12 +549,12 @@
                             <Property name="text" type="java.lang.String" value="VELHA"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="cemNova7">
+                        <Component class="javax.swing.JTextField" name="p20nova">
                           <Properties>
                             <Property name="toolTipText" type="java.lang.String" value=""/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="cemVelha7">
+                        <Component class="javax.swing.JTextField" name="p20usada">
                         </Component>
                       </SubComponents>
                     </Container>
@@ -396,9 +575,9 @@
                                   <Group type="103" groupAlignment="2" attributes="0">
                                       <Component id="jLabel37" alignment="2" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel38" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="cemNova8" alignment="2" min="-2" pref="62" max="-2" attributes="0"/>
+                                      <Component id="p10nova" alignment="2" min="-2" pref="62" max="-2" attributes="0"/>
                                       <Component id="jLabel39" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="cemVelha8" alignment="2" min="-2" pref="66" max="-2" attributes="0"/>
+                                      <Component id="p10usada" alignment="2" min="-2" pref="66" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
@@ -412,11 +591,11 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jLabel38" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="cemNova8" min="-2" max="-2" attributes="0"/>
+                                  <Component id="p10nova" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="jLabel39" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="cemVelha8" min="-2" max="-2" attributes="0"/>
+                                  <Component id="p10usada" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -438,12 +617,12 @@
                             <Property name="text" type="java.lang.String" value="VELHA"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="cemNova8">
+                        <Component class="javax.swing.JTextField" name="p10nova">
                           <Properties>
                             <Property name="toolTipText" type="java.lang.String" value=""/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="cemVelha8">
+                        <Component class="javax.swing.JTextField" name="p10usada">
                         </Component>
                       </SubComponents>
                     </Container>
@@ -464,9 +643,9 @@
                                   <Group type="103" groupAlignment="2" attributes="0">
                                       <Component id="jLabel40" alignment="2" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel41" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="cemNova9" alignment="2" min="-2" pref="62" max="-2" attributes="0"/>
+                                      <Component id="p05nova" alignment="2" min="-2" pref="62" max="-2" attributes="0"/>
                                       <Component id="jLabel42" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="cemVelha9" alignment="2" min="-2" pref="66" max="-2" attributes="0"/>
+                                      <Component id="p05usada" alignment="2" min="-2" pref="66" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
@@ -480,11 +659,11 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jLabel41" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="cemNova9" min="-2" max="-2" attributes="0"/>
+                                  <Component id="p05nova" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="jLabel42" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="cemVelha9" min="-2" max="-2" attributes="0"/>
+                                  <Component id="p05usada" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -506,12 +685,12 @@
                             <Property name="text" type="java.lang.String" value="VELHA"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="cemNova9">
+                        <Component class="javax.swing.JTextField" name="p05nova">
                           <Properties>
                             <Property name="toolTipText" type="java.lang.String" value=""/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="cemVelha9">
+                        <Component class="javax.swing.JTextField" name="p05usada">
                         </Component>
                       </SubComponents>
                     </Container>
@@ -532,9 +711,9 @@
                                   <Group type="103" groupAlignment="2" attributes="0">
                                       <Component id="jLabel43" alignment="2" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel44" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="cemNova10" alignment="2" min="-2" pref="62" max="-2" attributes="0"/>
+                                      <Component id="p02nova" alignment="2" min="-2" pref="62" max="-2" attributes="0"/>
                                       <Component id="jLabel45" alignment="2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="cemVelha10" alignment="2" min="-2" pref="66" max="-2" attributes="0"/>
+                                      <Component id="p02usada" alignment="2" min="-2" pref="66" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
@@ -548,11 +727,11 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jLabel44" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="cemNova10" min="-2" max="-2" attributes="0"/>
+                                  <Component id="p02nova" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="jLabel45" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="cemVelha10" min="-2" max="-2" attributes="0"/>
+                                  <Component id="p02usada" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -574,12 +753,12 @@
                             <Property name="text" type="java.lang.String" value="VELHA"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="cemNova10">
+                        <Component class="javax.swing.JTextField" name="p02nova">
                           <Properties>
                             <Property name="toolTipText" type="java.lang.String" value=""/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="cemVelha10">
+                        <Component class="javax.swing.JTextField" name="p02usada">
                         </Component>
                       </SubComponents>
                     </Container>
@@ -600,34 +779,6 @@
                           <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Component id="tbDataRetirada" min="-2" pref="82" max="-2" attributes="0"/>
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                              <EmptySpace type="unrelated" max="32767" attributes="0"/>
-                                              <Component id="lbTotalCaixa" min="-2" pref="24" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="lbSubtotal" min="-2" pref="24" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                  </Group>
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -638,12 +789,35 @@
                                       </Group>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Group type="103" groupAlignment="1" attributes="0">
+                                                  <Component id="tbDataRetirada" min="-2" pref="82" max="-2" attributes="0"/>
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <EmptySpace pref="38" max="32767" attributes="0"/>
+                                              <Component id="lbTotalCaixa" min="-2" pref="32" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="lbSubtotal" min="-2" pref="47" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -677,8 +851,6 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="tb3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -739,9 +911,6 @@
                       <Properties>
                         <Property name="editable" type="boolean" value="false"/>
                       </Properties>
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JTextField" name="tb2">
                       <Properties>
@@ -753,16 +922,16 @@
                         <Property name="editable" type="boolean" value="false"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton1">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="jButton1"/>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
-                      </Events>
-                    </Component>
                   </SubComponents>
                 </Container>
+                <Component class="javax.swing.JButton" name="jButton1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Sair"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+                  </Events>
+                </Component>
               </SubComponents>
             </Container>
           </SubComponents>
@@ -1057,7 +1226,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="250" max="-2" attributes="0"/>
                               <Component id="tfConsulta2" min="-2" pref="178" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
@@ -1068,7 +1237,7 @@
                               <Component id="jScrollPane1" min="-2" pref="400" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="586" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
