@@ -1,12 +1,8 @@
 
-import java.awt.Font;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.text.AttributeSet;
@@ -29,8 +25,9 @@ public class retiradaCaixa11 extends javax.swing.JInternalFrame {
     SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
     int contador2 = 0;
     double valorTotalDespesas = 0;
-    int subTotal=0;
-    
+    double subTotal = 0;
+    double subTotalCreditosCaixa = 0;
+    double subTotalDebitosCaixa = 0;
 
     public class DocumentoLimitado extends PlainDocument {
 
@@ -226,20 +223,38 @@ public class retiradaCaixa11 extends javax.swing.JInternalFrame {
         btNovo1 = new javax.swing.JButton();
         btSalvar1 = new javax.swing.JButton();
         btCancelar1 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
         tbValorDespesas = new javax.swing.JTextField();
         cbDespesas = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
         tbOutrosDespesas = new javax.swing.JTextField();
         tbAdicionarDespesas = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        TabelaDespesas = new javax.swing.JTable();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         totalDespesas = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tabelaDespesas = new javax.swing.JTable();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        lbJogosDespesas = new javax.swing.JTextField();
+        lbPremiosPagosDespesas = new javax.swing.JTextField();
+        lbEstornoDespesas = new javax.swing.JTextField();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        tbTotalDebitosCaixaDespesas = new javax.swing.JTextField();
+        tbTotalCreditosCaixaDespesas = new javax.swing.JTextField();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
         consulta = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         Tabela2 = new javax.swing.JTable();
@@ -416,6 +431,23 @@ public class retiradaCaixa11 extends javax.swing.JInternalFrame {
         jLabel33.setText("VELHA");
 
         p50nova.setToolTipText("");
+        p50nova.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                p50novaFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                p50novaFocusLost(evt);
+            }
+        });
+
+        p50usada.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                p50usadaFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                p50usadaFocusLost(evt);
+            }
+        });
 
         javax.swing.GroupLayout p50Layout = new javax.swing.GroupLayout(p50);
         p50.setLayout(p50Layout);
@@ -456,6 +488,23 @@ public class retiradaCaixa11 extends javax.swing.JInternalFrame {
         jLabel36.setText("VELHA");
 
         p20nova.setToolTipText("");
+        p20nova.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                p20novaFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                p20novaFocusLost(evt);
+            }
+        });
+
+        p20usada.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                p20usadaFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                p20usadaFocusLost(evt);
+            }
+        });
 
         javax.swing.GroupLayout p20Layout = new javax.swing.GroupLayout(p20);
         p20.setLayout(p20Layout);
@@ -496,6 +545,23 @@ public class retiradaCaixa11 extends javax.swing.JInternalFrame {
         jLabel39.setText("VELHA");
 
         p10nova.setToolTipText("");
+        p10nova.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                p10novaFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                p10novaFocusLost(evt);
+            }
+        });
+
+        p10usada.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                p10usadaFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                p10usadaFocusLost(evt);
+            }
+        });
 
         javax.swing.GroupLayout p10Layout = new javax.swing.GroupLayout(p10);
         p10.setLayout(p10Layout);
@@ -536,6 +602,23 @@ public class retiradaCaixa11 extends javax.swing.JInternalFrame {
         jLabel42.setText("VELHA");
 
         p05nova.setToolTipText("");
+        p05nova.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                p05novaFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                p05novaFocusLost(evt);
+            }
+        });
+
+        p05usada.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                p05usadaFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                p05usadaFocusLost(evt);
+            }
+        });
 
         javax.swing.GroupLayout p05Layout = new javax.swing.GroupLayout(p05);
         p05.setLayout(p05Layout);
@@ -576,6 +659,23 @@ public class retiradaCaixa11 extends javax.swing.JInternalFrame {
         jLabel45.setText("VELHA");
 
         p02nova.setToolTipText("");
+        p02nova.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                p02novaFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                p02novaFocusLost(evt);
+            }
+        });
+
+        p02usada.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                p02usadaFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                p02usadaFocusLost(evt);
+            }
+        });
 
         javax.swing.GroupLayout p02Layout = new javax.swing.GroupLayout(p02);
         p02.setLayout(p02Layout);
@@ -805,7 +905,12 @@ public class retiradaCaixa11 extends javax.swing.JInternalFrame {
             }
         });
 
+        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setText("Despesas diarias");
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         cbDespesas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione um Item", "Aluguel", "Grafica", "Luz", "Agua", "Outros" }));
         cbDespesas.addActionListener(new java.awt.event.ActionListener() {
@@ -836,8 +941,17 @@ public class retiradaCaixa11 extends javax.swing.JInternalFrame {
         });
 
         jButton2.setText("Excluir");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("Salvar");
+        jLabel7.setText("Total Despesas");
+
+        jLabel8.setText("R$: ");
+
+        totalDespesas.setText("0");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -845,46 +959,52 @@ public class retiradaCaixa11 extends javax.swing.JInternalFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tbOutrosDespesas, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(cbDespesas, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel6)
+                                .addGap(6, 6, 6)
+                                .addComponent(tbValorDespesas, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel8)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(totalDespesas, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(53, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(tbAdicionarDespesas)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jButton2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton3))
-                            .addComponent(jLabel5)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(cbDespesas, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tbValorDespesas, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(tbOutrosDespesas, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(26, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(92, 92, 92))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jLabel5)
-                .addGap(18, 18, 18)
+                .addGap(25, 25, 25)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cbDespesas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tbValorDespesas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(tbOutrosDespesas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tbAdicionarDespesas)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel8)
+                    .addComponent(totalDespesas))
+                .addContainerGap())
         );
 
-        TabelaDespesas.setModel(new javax.swing.table.DefaultTableModel(
+        tabelaDespesas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
                 {null, null},
@@ -895,13 +1015,173 @@ public class retiradaCaixa11 extends javax.swing.JInternalFrame {
                 "Item", "Valor"
             }
         ));
-        jScrollPane3.setViewportView(TabelaDespesas);
+        jScrollPane3.setViewportView(tabelaDespesas);
 
-        jLabel7.setText("Total Despesas");
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel5)
+                .addGap(102, 102, 102))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10))
+        );
 
-        jLabel8.setText("R$: ");
+        jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        totalDespesas.setText("0");
+        jLabel15.setText("Total Jogos");
+
+        jLabel16.setText("Prêmios Pagos");
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel17.setText("Debitos / Creditos Caixa");
+
+        jLabel18.setText("Estornos");
+
+        lbJogosDespesas.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                lbJogosDespesasFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                lbJogosDespesasFocusLost(evt);
+            }
+        });
+
+        lbPremiosPagosDespesas.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                lbPremiosPagosDespesasFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                lbPremiosPagosDespesasFocusLost(evt);
+            }
+        });
+
+        lbEstornoDespesas.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                lbEstornoDespesasFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                lbEstornoDespesasFocusLost(evt);
+            }
+        });
+
+        jLabel22.setText("R$");
+
+        jLabel23.setText("R$");
+
+        jLabel24.setText("R$");
+
+        jLabel25.setText("Debitos Caixa");
+
+        jLabel26.setText("Creditos Caixa");
+
+        tbTotalDebitosCaixaDespesas.setEditable(false);
+
+        tbTotalCreditosCaixaDespesas.setEditable(false);
+
+        jLabel27.setText("R$");
+
+        jLabel28.setText("R$");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addComponent(jLabel23)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbPremiosPagosDespesas, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel18)
+                                    .addComponent(jLabel16)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                                        .addComponent(jLabel15)
+                                        .addGap(19, 19, 19))
+                                    .addComponent(jLabel25)
+                                    .addComponent(jLabel26))
+                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel6Layout.createSequentialGroup()
+                                        .addGap(13, 13, 13)
+                                        .addComponent(jLabel22)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(lbJogosDespesas, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel24)
+                                            .addComponent(jLabel28)
+                                            .addComponent(jLabel27))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(lbEstornoDespesas)
+                                            .addComponent(tbTotalDebitosCaixaDespesas)
+                                            .addComponent(tbTotalCreditosCaixaDespesas, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)))))))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(59, 59, 59)
+                        .addComponent(jLabel17)))
+                .addContainerGap(47, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jLabel17)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(lbJogosDespesas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel22))
+                .addGap(25, 25, 25)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(lbPremiosPagosDespesas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel23))
+                .addGap(26, 26, 26)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(lbEstornoDespesas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel24))
+                .addGap(39, 39, 39)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel25)
+                    .addComponent(tbTotalDebitosCaixaDespesas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel27))
+                .addGap(32, 32, 32)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel26)
+                    .addComponent(tbTotalCreditosCaixaDespesas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel28))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jButton3.setText("Sair");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout menuLayout = new javax.swing.GroupLayout(menu);
         menu.setLayout(menuLayout);
@@ -910,27 +1190,19 @@ public class retiradaCaixa11 extends javax.swing.JInternalFrame {
             .addGroup(menuLayout.createSequentialGroup()
                 .addGroup(menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(menuLayout.createSequentialGroup()
-                        .addGap(48, 48, 48)
+                        .addGap(220, 220, 220)
                         .addComponent(btNovo1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btSalvar1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btCancelar1))
-                    .addGroup(menuLayout.createSequentialGroup()
-                        .addGroup(menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuLayout.createSequentialGroup()
-                                .addGap(40, 40, 40)
-                                .addComponent(jLabel7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(totalDespesas, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(menuLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(78, 78, 78)))
+                        .addComponent(btCancelar1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(menuLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(53, 53, 53)
+                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(20, 20, 20))
         );
         menuLayout.setVerticalGroup(
@@ -940,18 +1212,13 @@ public class retiradaCaixa11 extends javax.swing.JInternalFrame {
                 .addGroup(menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btNovo1)
                     .addComponent(btSalvar1)
-                    .addComponent(btCancelar1))
-                .addGap(51, 51, 51)
-                .addGroup(menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(menuLayout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(33, 33, 33)
-                        .addGroup(menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel8)
-                            .addComponent(totalDespesas)))
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20))
+                    .addComponent(btCancelar1)
+                    .addComponent(jButton3))
+                .addGap(18, 18, 18)
+                .addGroup(menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(19, 19, 19))
         );
 
         despesas.setViewportView(menu);
@@ -1045,7 +1312,7 @@ public class retiradaCaixa11 extends javax.swing.JInternalFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
+                .addContainerGap(19, Short.MAX_VALUE)
                 .addComponent(abaConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 555, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1124,7 +1391,6 @@ public class retiradaCaixa11 extends javax.swing.JInternalFrame {
 
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
 
-
 //        Produto pr;
 //        if (!(tbIsbn.getText().equals("")) & !(tbAno.getText().equals(""))
 //                & !(tbValor.getText().equals("")) & !(tbQuantidade.getText().equals(""))) {
@@ -1194,7 +1460,7 @@ public class retiradaCaixa11 extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btCancelar1ActionPerformed
 
     private void tbAdicionarDespesasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tbAdicionarDespesasActionPerformed
-        DefaultTableModel model = (DefaultTableModel) TabelaDespesas.getModel();
+        DefaultTableModel model = (DefaultTableModel) tabelaDespesas.getModel();
         model.setNumRows(contador2);
         if (!(tbValorDespesas.getText().equals(""))) {
             if (cbDespesas.getSelectedItem().equals("Selecione um Item")) {
@@ -1267,13 +1533,12 @@ public class retiradaCaixa11 extends javax.swing.JInternalFrame {
 //                    + "\n" + "Um(a) Funcionario(a)"
 //                    + "\n" + "Um Periodo");
 //        }
-        
-tb1.setText(cbCaixaRetirada.getItemAt(cbCaixaRetirada.getSelectedIndex()));
-            tb2.setText(cbFuncionariaRetirada.getItemAt(cbFuncionariaRetirada.getSelectedIndex()));
-            tb3.setText(cbPeriodoRetirada.getItemAt(cbPeriodoRetirada.getSelectedIndex()));
+        tb1.setText(cbCaixaRetirada.getItemAt(cbCaixaRetirada.getSelectedIndex()));
+        tb2.setText(cbFuncionariaRetirada.getItemAt(cbFuncionariaRetirada.getSelectedIndex()));
+        tb3.setText(cbPeriodoRetirada.getItemAt(cbPeriodoRetirada.getSelectedIndex()));
 
-            jPanel3.setVisible(false);
-            abaConsulta.setVisible(true);
+        jPanel3.setVisible(false);
+        abaConsulta.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -1283,6 +1548,7 @@ tb1.setText(cbCaixaRetirada.getItemAt(cbCaixaRetirada.getSelectedIndex()));
         cbFuncionariaRetirada.setSelectedItem("Selecione um(a) Funcionario(a)");
         cbPeriodoRetirada.setSelectedItem("Selecione um periodo");
 
+        tbValorDespesas.setText("");
         p100Nova.setText("");
         p100Usada.setText("");
         p50nova.setText("");
@@ -1298,50 +1564,299 @@ tb1.setText(cbCaixaRetirada.getItemAt(cbCaixaRetirada.getSelectedIndex()));
         p02nova.setText("");
         p02usada.setText("");
 
+        cbDespesas.setSelectedItem("Selecione um Item");
+        DefaultTableModel model = (DefaultTableModel) tabelaDespesas.getModel();
+        model.getDataVector().removeAllElements();
+        contador2 = 0;
+        lbEstornoDespesas.setText("");
+        lbJogosDespesas.setText("");
+        lbPremiosPagosDespesas.setText("");
+        tbTotalDebitosCaixaDespesas.setText("");
+        tbTotalCreditosCaixaDespesas.setText("");
+
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void p100NovaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p100NovaFocusLost
-int p100n = Integer.valueOf(p100Nova.getText());
+        int p100n = Integer.valueOf(p100Nova.getText());
 
-subTotal = subTotal + p100n*100;
+        subTotal = subTotal + p100n * 100;
 //p100Nova.setEnabled(false);
-lbSubtotal.setText(String.valueOf(subTotal));
+        lbSubtotal.setText(String.valueOf(subTotal));
 
         // TODO add your handling code here:
     }//GEN-LAST:event_p100NovaFocusLost
 
     private void p100UsadaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p100UsadaFocusLost
-int p100u = Integer.valueOf(p100Usada.getText());
+        int p100u = Integer.valueOf(p100Usada.getText());
 
-subTotal = subTotal + p100u*100;
-lbSubtotal.setText(String.valueOf(subTotal));
+        subTotal = subTotal + p100u * 100;
+        lbSubtotal.setText(String.valueOf(subTotal));
 
         // TODO add your handling code here:
     }//GEN-LAST:event_p100UsadaFocusLost
 
     private void p100NovaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p100NovaFocusGained
-       int p100n = Integer.valueOf(p100Nova.getText());
+        int p100n = Integer.valueOf(p100Nova.getText());
 
-subTotal = subTotal - p100n*100;
+        subTotal = subTotal - p100n * 100;
 //p100Nova.setEnabled(false);
-lbSubtotal.setText(String.valueOf(subTotal));
+        lbSubtotal.setText(String.valueOf(subTotal));
 // TODO add your handling code here:
     }//GEN-LAST:event_p100NovaFocusGained
 
     private void p100UsadaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p100UsadaFocusGained
-int p100u = Integer.valueOf(p100Usada.getText());
+        int p100u = Integer.valueOf(p100Usada.getText());
 
-subTotal = subTotal - p100u*100;
-lbSubtotal.setText(String.valueOf(subTotal));        // TODO add your handling code here:
+        subTotal = subTotal - p100u * 100;
+        lbSubtotal.setText(String.valueOf(subTotal));        // TODO add your handling code here:
     }//GEN-LAST:event_p100UsadaFocusGained
+
+    private void p50novaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p50novaFocusLost
+        int p50n = Integer.valueOf(p50nova.getText());
+
+        subTotal = subTotal + p50n * 50;
+        lbSubtotal.setText(String.valueOf(subTotal));         // TODO add your handling code here:
+    }//GEN-LAST:event_p50novaFocusLost
+
+    private void p50novaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p50novaFocusGained
+        int p50n = Integer.valueOf(p50nova.getText());
+
+        subTotal = subTotal - p50n * 50;
+        lbSubtotal.setText(String.valueOf(subTotal));         // TODO add your handling code here:
+    }//GEN-LAST:event_p50novaFocusGained
+
+    private void p50usadaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p50usadaFocusLost
+        int p50u = Integer.valueOf(p50usada.getText());
+
+        subTotal = subTotal + p50u * 50;
+        lbSubtotal.setText(String.valueOf(subTotal));
+    }//GEN-LAST:event_p50usadaFocusLost
+
+    private void p50usadaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p50usadaFocusGained
+        int p50u = Integer.valueOf(p50usada.getText());
+
+        subTotal = subTotal - p50u * 50;
+        lbSubtotal.setText(String.valueOf(subTotal));
+    }//GEN-LAST:event_p50usadaFocusGained
+
+    private void p20novaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p20novaFocusLost
+        int p20n = Integer.valueOf(p20nova.getText());
+
+        subTotal = subTotal + p20n * 20;
+        lbSubtotal.setText(String.valueOf(subTotal));
+    }//GEN-LAST:event_p20novaFocusLost
+
+    private void p20novaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p20novaFocusGained
+        int p20n = Integer.valueOf(p20nova.getText());
+
+        subTotal = subTotal - p20n * 20;
+        lbSubtotal.setText(String.valueOf(subTotal));
+    }//GEN-LAST:event_p20novaFocusGained
+
+    private void p20usadaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p20usadaFocusLost
+        int p20u = Integer.valueOf(p20usada.getText());
+
+        subTotal = subTotal + p20u * 20;
+        lbSubtotal.setText(String.valueOf(subTotal));
+    }//GEN-LAST:event_p20usadaFocusLost
+
+    private void p20usadaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p20usadaFocusGained
+        int p20n = Integer.valueOf(p20usada.getText());
+
+        subTotal = subTotal - p20n * 20;
+        lbSubtotal.setText(String.valueOf(subTotal));
+    }//GEN-LAST:event_p20usadaFocusGained
+
+    private void p10novaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p10novaFocusLost
+        int p10n = Integer.valueOf(p10nova.getText());
+
+        subTotal = subTotal + p10n * 10;
+        lbSubtotal.setText(String.valueOf(subTotal));
+    }//GEN-LAST:event_p10novaFocusLost
+
+    private void p10novaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p10novaFocusGained
+        int p10n = Integer.valueOf(p10nova.getText());
+
+        subTotal = subTotal - p10n * 10;
+        lbSubtotal.setText(String.valueOf(subTotal));
+    }//GEN-LAST:event_p10novaFocusGained
+
+    private void p10usadaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p10usadaFocusLost
+        int p10u = Integer.valueOf(p10usada.getText());
+
+        subTotal = subTotal + p10u * 10;
+        lbSubtotal.setText(String.valueOf(subTotal));
+    }//GEN-LAST:event_p10usadaFocusLost
+
+    private void p10usadaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p10usadaFocusGained
+        int p10u = Integer.valueOf(p10usada.getText());
+
+        subTotal = subTotal - p10u * 10;
+        lbSubtotal.setText(String.valueOf(subTotal));
+    }//GEN-LAST:event_p10usadaFocusGained
+
+    private void p05novaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p05novaFocusLost
+        int p05n = Integer.valueOf(p05nova.getText());
+
+        subTotal = subTotal + p05n * 5;
+        lbSubtotal.setText(String.valueOf(subTotal));
+    }//GEN-LAST:event_p05novaFocusLost
+
+    private void p05novaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p05novaFocusGained
+        int p05n = Integer.valueOf(p05nova.getText());
+
+        subTotal = subTotal - p05n * 5;
+        lbSubtotal.setText(String.valueOf(subTotal));
+    }//GEN-LAST:event_p05novaFocusGained
+
+    private void p05usadaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p05usadaFocusLost
+        int p05u = Integer.valueOf(p05usada.getText());
+
+        subTotal = subTotal + p05u * 5;
+        lbSubtotal.setText(String.valueOf(subTotal));
+    }//GEN-LAST:event_p05usadaFocusLost
+
+    private void p05usadaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p05usadaFocusGained
+        int p05u = Integer.valueOf(p05usada.getText());
+
+        subTotal = subTotal - p05u * 5;
+        lbSubtotal.setText(String.valueOf(subTotal));
+    }//GEN-LAST:event_p05usadaFocusGained
+
+    private void p02novaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p02novaFocusLost
+        int p02n = Integer.valueOf(p02nova.getText());
+
+        subTotal = subTotal + p02n * 2;
+        lbSubtotal.setText(String.valueOf(subTotal));
+    }//GEN-LAST:event_p02novaFocusLost
+
+    private void p02novaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p02novaFocusGained
+        int p02n = Integer.valueOf(p02nova.getText());
+
+        subTotal = subTotal - p02n * 2;
+        lbSubtotal.setText(String.valueOf(subTotal));
+    }//GEN-LAST:event_p02novaFocusGained
+
+    private void p02usadaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p02usadaFocusLost
+        int p02u = Integer.valueOf(p02usada.getText());
+
+        subTotal = subTotal + p02u * 2;
+        lbSubtotal.setText(String.valueOf(subTotal));
+    }//GEN-LAST:event_p02usadaFocusLost
+
+    private void p02usadaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_p02usadaFocusGained
+        int p02u = Integer.valueOf(p02usada.getText());
+
+        subTotal = subTotal - p02u * 2;
+        lbSubtotal.setText(String.valueOf(subTotal));
+    }//GEN-LAST:event_p02usadaFocusGained
+
+    private void lbJogosDespesasFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lbJogosDespesasFocusLost
+        double jogoscaixa = Double.valueOf(lbJogosDespesas.getText());
+
+        subTotalCreditosCaixa = subTotalCreditosCaixa + jogoscaixa;
+        tbTotalCreditosCaixaDespesas.setText(String.valueOf(subTotalCreditosCaixa));
+
+    }//GEN-LAST:event_lbJogosDespesasFocusLost
+
+    private void lbJogosDespesasFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lbJogosDespesasFocusGained
+        double jogoscaixa = Double.valueOf(lbJogosDespesas.getText());
+
+        subTotalCreditosCaixa = subTotalCreditosCaixa - jogoscaixa;
+        tbTotalCreditosCaixaDespesas.setText(String.valueOf(subTotalCreditosCaixa));
+    }//GEN-LAST:event_lbJogosDespesasFocusGained
+
+    private void lbPremiosPagosDespesasFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lbPremiosPagosDespesasFocusLost
+        double jogospagos = Double.valueOf(lbPremiosPagosDespesas.getText());
+
+        subTotalDebitosCaixa = subTotalDebitosCaixa + jogospagos;
+        tbTotalDebitosCaixaDespesas.setText(String.valueOf(subTotalDebitosCaixa));
+    }//GEN-LAST:event_lbPremiosPagosDespesasFocusLost
+
+    private void lbPremiosPagosDespesasFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lbPremiosPagosDespesasFocusGained
+        double jogospagos = Double.valueOf(lbPremiosPagosDespesas.getText());
+
+        subTotalDebitosCaixa = subTotalDebitosCaixa - jogospagos;
+        tbTotalDebitosCaixaDespesas.setText(String.valueOf(subTotalDebitosCaixa));
+
+    }//GEN-LAST:event_lbPremiosPagosDespesasFocusGained
+
+    private void lbEstornoDespesasFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lbEstornoDespesasFocusLost
+        double estorno = Double.valueOf(lbEstornoDespesas.getText());
+
+        subTotalDebitosCaixa = subTotalDebitosCaixa + estorno;
+        tbTotalDebitosCaixaDespesas.setText(String.valueOf(subTotalDebitosCaixa));
+    }//GEN-LAST:event_lbEstornoDespesasFocusLost
+
+    private void lbEstornoDespesasFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lbEstornoDespesasFocusGained
+        double estorno = Double.valueOf(lbEstornoDespesas.getText());
+
+        subTotalDebitosCaixa = subTotalDebitosCaixa - estorno;
+        tbTotalDebitosCaixaDespesas.setText(String.valueOf(subTotalDebitosCaixa));
+    }//GEN-LAST:event_lbEstornoDespesasFocusGained
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        DefaultTableModel dtm = (DefaultTableModel) tabelaDespesas.getModel();
+        if (tabelaDespesas.getSelectedRow() >= 0) {
+            String temp = (String) dtm.getValueAt(tabelaDespesas.getSelectedRow(), 1);
+            double temp2 = Double.valueOf(temp);
+            valorTotalDespesas = valorTotalDespesas - temp2;
+            //JOptionPane.showMessageDialog(null,temp2);
+            totalDespesas.setText(String.valueOf(valorTotalDespesas));
+            dtm.removeRow(tabelaDespesas.getSelectedRow());
+            tabelaDespesas.setModel(dtm);
+            contador2--;
+            dtm.setNumRows(contador2);
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Favor selecionar uma linha");
+        }
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        jPanel3.setVisible(true);
+        abaConsulta.setVisible(false);
+        cbCaixaRetirada.setSelectedItem("Selecione um caixa");
+        cbFuncionariaRetirada.setSelectedItem("Selecione um(a) Funcionario(a)");
+        cbPeriodoRetirada.setSelectedItem("Selecione um periodo");
+
+        tbValorDespesas.setText("");
+        p100Nova.setText("");
+        p100Usada.setText("");
+        p50nova.setText("");
+        p50usada.setText("");
+        p10nova.setText("");
+        p10usada.setText("");
+        p20nova.setText("");
+        p20usada.setText("");
+        p10nova.setText("");
+        p10usada.setText("");
+        p05nova.setText("");
+        p05usada.setText("");
+        p02nova.setText("");
+        p02usada.setText("");
+
+        cbDespesas.setSelectedItem("Selecione um Item");
+        DefaultTableModel model = (DefaultTableModel) tabelaDespesas.getModel();
+        model.getDataVector().removeAllElements();
+        contador2 = 0;
+        lbEstornoDespesas.setText("");
+        lbJogosDespesas.setText("");
+        lbPremiosPagosDespesas.setText("");
+        tbTotalDebitosCaixaDespesas.setText("");
+        tbTotalCreditosCaixaDespesas.setText("");
+
+
+    }//GEN-LAST:event_jButton3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Consultar2;
     private javax.swing.JScrollPane PainelRetirada;
     private javax.swing.JTable Tabela2;
-    private javax.swing.JTable TabelaDespesas;
     private javax.swing.JTabbedPane abaConsulta;
     private javax.swing.JButton btCancelar;
     private javax.swing.JButton btCancelar1;
@@ -1365,10 +1880,21 @@ lbSubtotal.setText(String.valueOf(subTotal));        // TODO add your handling c
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
@@ -1395,8 +1921,13 @@ lbSubtotal.setText(String.valueOf(subTotal));        // TODO add your handling c
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTextField lbEstornoDespesas;
+    private javax.swing.JTextField lbJogosDespesas;
+    private javax.swing.JTextField lbPremiosPagosDespesas;
     private javax.swing.JLabel lbSubtotal;
     private javax.swing.JLabel lbTotalCaixa;
     private javax.swing.JPanel menu;
@@ -1419,6 +1950,7 @@ lbSubtotal.setText(String.valueOf(subTotal));        // TODO add your handling c
     private javax.swing.JTextField p50nova;
     private javax.swing.JTextField p50usada;
     private javax.swing.JPanel retirada;
+    private javax.swing.JTable tabelaDespesas;
     private javax.swing.JTextField tb1;
     private javax.swing.JTextField tb2;
     private javax.swing.JTextField tb3;
@@ -1426,6 +1958,8 @@ lbSubtotal.setText(String.valueOf(subTotal));        // TODO add your handling c
     private javax.swing.JTextField tbDataRetirada;
     private javax.swing.JTextField tbDataSelecao;
     private javax.swing.JTextField tbOutrosDespesas;
+    private javax.swing.JTextField tbTotalCreditosCaixaDespesas;
+    private javax.swing.JTextField tbTotalDebitosCaixaDespesas;
     private javax.swing.JTextField tbValorDespesas;
     private javax.swing.JTextField tfConsulta2;
     private javax.swing.JLabel totalDespesas;
