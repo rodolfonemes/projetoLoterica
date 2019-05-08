@@ -140,15 +140,15 @@ public class menu extends javax.swing.JFrame {
 
     
     private void btLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLoginActionPerformed
-//login lo = new login();
-//desktop.add(lo);
-//lo.setVisible(true);
-//try {
-//lo.setMaximum(true);
-//lo.setSelected(true);
-//} catch (Exception e2) {
-//e2.printStackTrace();
-//}
+login lo = new login();
+desktop.add(lo);
+lo.setVisible(true);
+try {
+lo.setMaximum(true);
+lo.setSelected(true);
+} catch (Exception e2) {
+e2.printStackTrace();
+}
 btTela.setEnabled(true);
 //btVendas.setEnabled(false);
 btCadUsuario.setVisible(false);
@@ -189,15 +189,15 @@ cadUsuario.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_btCadUsuarioActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-//login lo = new login();
-//desktop.add(lo);
-//lo.setVisible(true);
-//try {
-//lo.setMaximum(true);
-//lo.setSelected(true);
-//} catch (Exception e2) {
-//e2.printStackTrace();
-//}
+login lo = new login();
+desktop.add(lo);
+lo.setVisible(true);
+try {
+lo.setMaximum(true);
+lo.setSelected(true);
+} catch (Exception e2) {
+e2.printStackTrace();
+}
 btLogin.setEnabled(false);
 btTela.setEnabled(true);
 //btVendas.setEnabled(false);
