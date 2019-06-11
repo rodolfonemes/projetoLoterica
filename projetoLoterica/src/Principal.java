@@ -7,6 +7,8 @@ public class Principal {
       menuProduto = new menu();
       menuProduto.setVisible(true);
       
+      
+      
     }
     
 }

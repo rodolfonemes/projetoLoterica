@@ -1,5 +1,6 @@
 
 
+import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Label;
 import java.awt.Toolkit;
@@ -52,10 +53,9 @@ public class menu extends javax.swing.JFrame {
         btLogin = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         desktop = new javax.swing.JDesktopPane();
-        jSeparator2 = new javax.swing.JSeparator();
         btTela = new javax.swing.JButton();
         btCadUsuario = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btRme = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Loterica");
@@ -75,20 +75,17 @@ public class menu extends javax.swing.JFrame {
             }
         });
 
-        desktop.setLayer(jSeparator2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        desktop.setMaximumSize(new java.awt.Dimension(1440, 900));
 
         javax.swing.GroupLayout desktopLayout = new javax.swing.GroupLayout(desktop);
         desktop.setLayout(desktopLayout);
         desktopLayout.setHorizontalGroup(
             desktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator2)
+            .addGap(0, 809, Short.MAX_VALUE)
         );
         desktopLayout.setVerticalGroup(
             desktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, desktopLayout.createSequentialGroup()
-                .addContainerGap(630, Short.MAX_VALUE)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26))
+            .addGap(0, 656, Short.MAX_VALUE)
         );
 
         btTela.setText("Lancamento Caixas");
@@ -105,10 +102,10 @@ public class menu extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("RME CEF");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btRme.setText("RME CEF");
+        btRme.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btRmeActionPerformed(evt);
             }
         });
 
@@ -119,15 +116,19 @@ public class menu extends javax.swing.JFrame {
             .addComponent(jSeparator1)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btTela, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
-                .addComponent(btCadUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(btLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(95, 95, 95))
-            .addComponent(desktop, javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btTela, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btRme, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
+                        .addComponent(btCadUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27)
+                        .addComponent(btLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(95, 95, 95))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(desktop, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -137,11 +138,11 @@ public class menu extends javax.swing.JFrame {
                     .addComponent(btTela, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btCadUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btRme, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(desktop)
+                .addComponent(desktop, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -159,33 +160,30 @@ lo.setSelected(true);
 } catch (Exception e2) {
 e2.printStackTrace();
 }
-btTela.setEnabled(true);
-//btVendas.setEnabled(false);
-btCadUsuario.setVisible(false);
+btTela.setEnabled(false);
+btCadUsuario.setEnabled(false);
 btLogin.setEnabled(false);
+btRme.setEnabled(false);
 
 
         // TODO add your handling code here:
     }//GEN-LAST:event_btLoginActionPerformed
 
     private void btTelaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btTelaActionPerformed
-//selecao te = new selecao();
-//desktop.add(te);
-//te.setVisible(true);
 
 retiradaCaixa te = new retiradaCaixa();
 desktop.add(te);
 te.setVisible(true);
 
 
-//try {
+try {
 
-//te.setSize(d.width-12, d.height-130);
-//te.setMaximum(true);
-//te.setSelected(true);
-//} catch (Exception e2) {
-//e2.printStackTrace();
-//}
+te.setSize(d.width-12, d.height-130);
+te.setMaximum(true);
+te.setSelected(true);
+} catch (Exception e2) {
+e2.printStackTrace();
+}
 
 
     }//GEN-LAST:event_btTelaActionPerformed
@@ -197,31 +195,49 @@ te.setVisible(true);
     private void btCadUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadUsuarioActionPerformed
 cadastroUsuario cadUsuario = new cadastroUsuario();
 desktop.add(cadUsuario);
-cadUsuario.setVisible(true);// TODO add your handling code here:
+cadUsuario.setVisible(true);
+try {
+
+cadUsuario.setSize(d.width-12, d.height-130);
+cadUsuario.setMaximum(true);
+cadUsuario.setSelected(true);
+} catch (Exception e2) {
+e2.printStackTrace();
+}
+// TODO add your handling code here:
     }//GEN-LAST:event_btCadUsuarioActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-//login lo = new login();
-//desktop.add(lo);
-//lo.setVisible(true);
-//try {
-//lo.setMaximum(true);
-//lo.setSelected(true);
-//} catch (Exception e2) {
-//e2.printStackTrace();
-//}
+login lo = new login();
+desktop.add(lo);
+lo.setVisible(true);
+try {
+lo.setMaximum(true);
+lo.setSelected(true);
+} catch (Exception e2) {
+e2.printStackTrace();
+}
 btLogin.setEnabled(false);
-btTela.setEnabled(true);
-//btVendas.setEnabled(false);
-btCadUsuario.setVisible(false);        
-// TODO add your handling code here:
+btTela.setEnabled(false);
+btCadUsuario.setEnabled(false);
+btRme.setEnabled(false);
     }//GEN-LAST:event_formWindowOpened
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-Rme rme = new Rme();
-desktop.add(rme);
+    private void btRmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btRmeActionPerformed
+Rme2 rme = new Rme2();
+desktop.add(rme, BorderLayout.NORTH);
 rme.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+
+
+try {
+
+rme.setSize(d.width-12, d.height-130);
+rme.setMaximum(true);
+rme.setSelected(true);
+} catch (Exception e2) {
+e2.printStackTrace();
+}
+    }//GEN-LAST:event_btRmeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -257,10 +273,9 @@ rme.setVisible(true);
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JButton btCadUsuario;
     public static javax.swing.JButton btLogin;
+    public static javax.swing.JButton btRme;
     public static javax.swing.JButton btTela;
     public static javax.swing.JDesktopPane desktop;
-    private javax.swing.JButton jButton1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
     // End of variables declaration//GEN-END:variables
 }

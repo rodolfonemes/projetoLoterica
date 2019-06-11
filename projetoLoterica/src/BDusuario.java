@@ -22,8 +22,10 @@ PreparedStatement pstmt;
                 + "cpf, "
                 + "senha,"
                 + "nome, "
-                + "trocarSenha) "
-                + " VALUES(?, ?, ?, ?)";
+                + "trocarSenha,"
+                + "rg,"
+                + "ctts) "
+                + " VALUES(?, ?, ?, ?, ?, ?)";
         //JOptionPane.showMessageDialog(null, sInsert);
         try {
             con = CriarConexao.getConexao();
@@ -32,6 +34,8 @@ PreparedStatement pstmt;
             pstmt.setString(2, p.getSenha());
             pstmt.setString(3, p.getNome());
             pstmt.setBoolean(4, p.isTrocaSenha());
+            pstmt.setString(5, p.getRg());
+            pstmt.setString(6, p.getCtts());
             pstmt.executeUpdate();
             JOptionPane.showMessageDialog(null, "Registro gravado com sucesso");
         } catch (SQLException ex) {
@@ -46,7 +50,9 @@ PreparedStatement pstmt;
         sInsert = "update usuario set  "
                 + "senha = ?, "
                 + "nome = ?, "
-                + "trocarSenha = ? "
+                + "trocarSenha = ?, "
+                + "rg = ?, "
+                + "ctts = ? "
                 + "where cpf = ?";
         //JOptionPane.showMessageDialog(null, sInsert);
         try {
@@ -55,7 +61,9 @@ PreparedStatement pstmt;
             pstmt.setString(1, p.getSenha());
             pstmt.setString(2, p.getNome());
             pstmt.setBoolean(3, p.isTrocaSenha());
-            pstmt.setString(4, p.getUsuario());
+            pstmt.setString(4, p.getRg());
+            pstmt.setString(5, p.getCtts());
+            pstmt.setString(6, p.getUsuario());
             pstmt.executeUpdate();
                       //JOptionPane.showMessageDialog(null, "Cadastro atualizado");
         } catch (SQLException ex) {
@@ -81,6 +89,8 @@ PreparedStatement pstmt;
                 pr.setUsuario(rs.getString("cpf"));
                 pr.setNome(rs.getString("nome"));
                 pr.setTrocaSenha(rs.getBoolean("trocarSenha"));
+                pr.setRg(rs.getString("rg"));
+                pr.setCtts(rs.getString("ctts"));
                 
                return pr;
             } else {
@@ -114,6 +124,8 @@ PreparedStatement pstmt;
                 pr.setSenha(rs.getString("senha"));
                 pr.setNome(rs.getString("nome"));
                 pr.setTrocaSenha(rs.getBoolean("trocarSenha"));
+                pr.setRg(rs.getString("rg"));
+                pr.setCtts(rs.getString("ctts"));
                 listaUsuario.add(pr);
                 //JOptionPane.showMessageDialog(null, "nome " + op.getNome());
             }
