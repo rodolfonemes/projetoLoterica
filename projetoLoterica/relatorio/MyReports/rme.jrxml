@@ -40,44 +40,64 @@ FROM ditalivros.usuario]]>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="85" splitType="Stretch">
+		<band height="102" splitType="Stretch">
 			<image>
-				<reportElement x="0" y="17" width="304" height="50" uuid="b8f0cc6a-cf09-4053-a430-8a0e25e01c18"/>
+				<reportElement x="0" y="45" width="304" height="50" uuid="b8f0cc6a-cf09-4053-a430-8a0e25e01c18"/>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
 				<imageExpression><![CDATA["C:/Users/familia1/Desktop/javaprojeto/projetoLoterica/projetoLoterica/src/imagens/caixa.png"]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement x="330" y="17" width="71" height="30" uuid="eea9de92-333a-4c40-9576-092bc0e52dcf"/>
+				<reportElement x="330" y="56" width="71" height="30" uuid="eea9de92-333a-4c40-9576-092bc0e52dcf"/>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="20"/>
 				</textElement>
 				<text><![CDATA[DATA]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="410" y="17" width="128" height="30" uuid="8a5bf96b-b88e-4a91-a513-53ee3be54b71"/>
+				<reportElement x="410" y="56" width="128" height="30" uuid="8a5bf96b-b88e-4a91-a513-53ee3be54b71"/>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="20"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="66ae125e-27c7-4d91-a18c-a13fc2b99e7a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[# CONFIDENCIAL 05]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="0" width="100" height="20" uuid="62418470-a836-4347-9ab0-f8f4e5f99530"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[OR 028 084]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="100" height="20" uuid="b51c7c68-b268-4893-938f-87548c19bfbb"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<text><![CDATA[6.3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="20" width="438" height="20" uuid="6d82e1c0-3007-4b42-8028-ccd18c450c23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ANEXO III - GUIA DE REMESSA DE NUMERÁRIO PELA UL POR MEIO DE CARRO-FORTE]]></text>
+			</staticText>
 		</band>
 	</title>
 	<pageHeader>
-		<band height="230" splitType="Stretch">
+		<band height="233" splitType="Stretch">
 			<staticText>
-				<reportElement x="120" y="8" width="293" height="30" uuid="39557a7e-9f71-409a-b0e2-10c8ee2740b4"/>
+				<reportElement x="120" y="8" width="293" height="32" uuid="39557a7e-9f71-409a-b0e2-10c8ee2740b4"/>
 				<box padding="1">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="18"/>
 				</textElement>
 				<text><![CDATA[REMESSA DE NUMERÁRIO]]></text>
@@ -87,7 +107,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="18"/>
 				</textElement>
 				<text><![CDATA[LOTÉRICA : ]]></text>
@@ -97,7 +117,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="18"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -107,7 +127,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="18"/>
 				</textElement>
 				<text><![CDATA[CÓDIGO UL : ]]></text>
@@ -117,7 +137,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="18"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -127,7 +147,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="18"/>
 				</textElement>
 				<text><![CDATA[ag:]]></text>
@@ -137,7 +157,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="18"/>
 				</textElement>
 				<text><![CDATA[op:]]></text>
@@ -147,7 +167,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="18"/>
 				</textElement>
 				<text><![CDATA[CC:]]></text>
@@ -157,7 +177,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="18"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -167,7 +187,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="18"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -177,7 +197,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="18"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -187,7 +207,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="18"/>
 				</textElement>
 				<text><![CDATA[GTV no.:]]></text>
@@ -197,7 +217,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="18"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -207,7 +227,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="18"/>
 				</textElement>
 				<text><![CDATA[TRANSPORTADORA:]]></text>
@@ -217,7 +237,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="18"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -225,16 +245,19 @@ FROM ditalivros.usuario]]>
 		</band>
 	</pageHeader>
 	<columnHeader>
-		<band height="13" splitType="Stretch"/>
+		<band height="25" splitType="Stretch"/>
 	</columnHeader>
 	<detail>
-		<band height="350" splitType="Stretch">
+		<band height="355" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="520" height="350" uuid="4bdbea07-1b8c-42b4-a4ad-1c39af1c3747"/>
+			</rectangle>
 			<staticText>
 				<reportElement x="0" y="80" width="90" height="30" uuid="719afc6b-26d1-444f-861e-a3bd87b1d80a"/>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<text><![CDATA[R$ 1,00]]></text>
@@ -244,7 +267,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<text><![CDATA[R$ 5,00]]></text>
@@ -254,7 +277,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<text><![CDATA[R$ 10,00]]></text>
@@ -264,7 +287,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<text><![CDATA[R$ 10,00]]></text>
@@ -274,7 +297,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<text><![CDATA[R$ 20,00]]></text>
@@ -284,7 +307,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<text><![CDATA[R$ 50,00]]></text>
@@ -294,7 +317,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<text><![CDATA[R$ 100,00]]></text>
@@ -304,7 +327,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -314,7 +337,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -324,7 +347,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -334,7 +357,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -344,7 +367,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -354,7 +377,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -364,7 +387,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -374,7 +397,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -384,7 +407,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -394,7 +417,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -404,7 +427,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -414,7 +437,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -424,7 +447,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -434,7 +457,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -444,7 +467,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<text><![CDATA[CÉDULAS]]></text>
@@ -454,7 +477,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -464,7 +487,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -474,7 +497,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -484,7 +507,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -494,7 +517,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -504,7 +527,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -514,7 +537,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -524,7 +547,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -534,7 +557,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -544,7 +567,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -554,7 +577,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -564,7 +587,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -574,7 +597,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -584,7 +607,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -594,7 +617,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -604,7 +627,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -614,7 +637,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -624,7 +647,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -634,7 +657,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -644,7 +667,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -654,7 +677,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -664,7 +687,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -674,7 +697,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -684,7 +707,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -694,7 +717,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -704,7 +727,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -714,7 +737,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -724,7 +747,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
@@ -734,7 +757,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="14"/>
 				</textElement>
 				<text><![CDATA[CÉDULAS ANTIGAS]]></text>
@@ -744,7 +767,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<text><![CDATA[Quant.]]></text>
@@ -754,7 +777,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<text><![CDATA[R$]]></text>
@@ -764,7 +787,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="14"/>
 				</textElement>
 				<text><![CDATA[TOTAL]]></text>
@@ -774,7 +797,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<text><![CDATA[Quant.]]></text>
@@ -784,7 +807,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<text><![CDATA[R$]]></text>
@@ -794,7 +817,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="14"/>
 				</textElement>
 				<text><![CDATA[Nova Familia Real]]></text>
@@ -804,7 +827,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<text><![CDATA[Quant.]]></text>
@@ -814,7 +837,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="16"/>
 				</textElement>
 				<text><![CDATA[R$]]></text>
@@ -824,7 +847,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="14"/>
 				</textElement>
 				<text><![CDATA[MATERIAL]]></text>
@@ -834,7 +857,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="14"/>
 				</textElement>
 				<text><![CDATA[papel]]></text>
@@ -844,7 +867,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="14"/>
 				</textElement>
 				<text><![CDATA[papel]]></text>
@@ -854,7 +877,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="14"/>
 				</textElement>
 				<text><![CDATA[polimero]]></text>
@@ -864,7 +887,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="14"/>
 				</textElement>
 				<text><![CDATA[papel]]></text>
@@ -874,7 +897,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="14"/>
 				</textElement>
 				<text><![CDATA[papel]]></text>
@@ -884,7 +907,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="14"/>
 				</textElement>
 				<text><![CDATA[papel]]></text>
@@ -894,7 +917,7 @@ FROM ditalivros.usuario]]>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="14"/>
 				</textElement>
 				<text><![CDATA[papel]]></text>
@@ -902,9 +925,9 @@ FROM ditalivros.usuario]]>
 		</band>
 	</detail>
 	<pageFooter>
-		<band height="95" splitType="Stretch">
+		<band height="79" splitType="Stretch">
 			<staticText>
-				<reportElement x="0" y="-8" width="521" height="98" uuid="fee57845-e442-4e5a-8b67-447b3c752de5"/>
+				<reportElement x="0" y="10" width="521" height="68" uuid="fee57845-e442-4e5a-8b67-447b3c752de5"/>
 				<box padding="0">
 					<pen lineWidth="0.5"/>
 				</box>
