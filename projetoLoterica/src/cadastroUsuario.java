@@ -377,7 +377,7 @@ public class cadastroUsuario extends javax.swing.JInternalFrame {
         jLabel1.setText("Nome  da Loterica");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setText("Endere√ßo");
+        jLabel2.setText("EndereÁo");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("Numero");
@@ -725,7 +725,7 @@ public class cadastroUsuario extends javax.swing.JInternalFrame {
             btCadatroNovo.setEnabled(true);
 
         } else {
-            JOptionPane.showMessageDialog(null, "Cpf e Senha s√£o obrigatorios para cadastro");
+            JOptionPane.showMessageDialog(null, "Cpf e Senha s„o obrigatorios para cadastro");
         }
 
         // TODO add your handling code here:

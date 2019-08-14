@@ -456,9 +456,9 @@ public class fechamantoLotericaDia extends javax.swing.JInternalFrame {
         jLabel65.setText("FEDERAL");
 
         jLabel66.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel66.setText("OBSERVACÃ•ES");
+        jLabel66.setText("OBSERVACÕES");
 
-        jLabel67.setText("COMISSÃƒO FEDERAL");
+        jLabel67.setText("COMISSÃO FEDERAL");
 
         tbJogosFechamento1.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -493,7 +493,7 @@ public class fechamantoLotericaDia extends javax.swing.JInternalFrame {
 
         jLabel70.setText("R$");
 
-        jLabel71.setText("COMISSÃƒO BOLÃƒO");
+        jLabel71.setText("COMISSÃO BOLÃO");
 
         tbTotalDebitosCaixaFechamento1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -717,12 +717,12 @@ public class fechamantoLotericaDia extends javax.swing.JInternalFrame {
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DSM", "FEDERAL", "COMISSÃƒO FEDERAL", "COMISSÃƒO BOLÃƒO", "FIADO", "DIVERSOS" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DSM", "FEDERAL", "COMISSÃO FEDERAL", "COMISSÃO BOLÃO", "FIADO", "DIVERSOS" }));
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel17.setText("ObservaÃ§oes");
+        jLabel17.setText("Observaçoes");
 
-        jLabel1.setText("DESCRIÃ‡ÃƒO");
+        jLabel1.setText("DESCRIÇÃO");
 
         tbDescricao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -833,7 +833,7 @@ public class fechamantoLotericaDia extends javax.swing.JInternalFrame {
 
         observacao.setViewportView(retirada);
 
-        abaConsulta.addTab("OBSERVAÃ‡ÃƒO", observacao);
+        abaConsulta.addTab("OBSERVAÇÃO", observacao);
 
         Tabela2.setAutoCreateRowSorter(true);
         Tabela2.setModel(new javax.swing.table.DefaultTableModel(
@@ -844,7 +844,7 @@ public class fechamantoLotericaDia extends javax.swing.JInternalFrame {
                 {null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "ISBN", "TITULO", "AUTOR", "EDITORA", "ANO DA EDIÃ‡ÃƒO", "TIPO", "ESTANTE", "QUANTIDADE", "VALOR", "DESCRIÃ‡ÃƒO"
+                "ISBN", "TITULO", "AUTOR", "EDITORA", "ANO DA EDIÇÃO", "TIPO", "ESTANTE", "QUANTIDADE", "VALOR", "DESCRIÇÃO"
             }
         ) {
             boolean[] canEdit = new boolean [] {

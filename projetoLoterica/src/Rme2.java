@@ -225,7 +225,7 @@ public class Rme2 extends javax.swing.JInternalFrame {
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel3.setText("REMESSA DE NUMER√ÅRIO");
+        jLabel3.setText("REMESSA DE NUMER¡RIO");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -244,10 +244,10 @@ public class Rme2 extends javax.swing.JInternalFrame {
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel4.setText("LOT√âRICA:");
+        jLabel4.setText("LOT…RICA:");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel5.setText("LOT√âRICA CHAPARRAL Ltda - ME");
+        jLabel5.setText("LOT…RICA CHAPARRAL Ltda - ME");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -272,7 +272,7 @@ public class Rme2 extends javax.swing.JInternalFrame {
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel6.setText("C√ìDIGO UL:");
+        jLabel6.setText("C”DIGO UL:");
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel7.setText("21.001211-0");
@@ -460,7 +460,7 @@ public class Rme2 extends javax.swing.JInternalFrame {
         jPanel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jLabel17.setText("C√âLULAS");
+        jLabel17.setText("C…LULAS");
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
@@ -502,7 +502,7 @@ public class Rme2 extends javax.swing.JInternalFrame {
         jPanel14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jLabel19.setText("C√âDULAS ANTIGAS");
+        jLabel19.setText("C…DULAS ANTIGAS");
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
@@ -606,7 +606,7 @@ public class Rme2 extends javax.swing.JInternalFrame {
         jPanel18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel22.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jLabel22.setText("NOVA FAM√çLIA DO REAL");
+        jLabel22.setText("NOVA FAMÕLIA DO REAL");
 
         javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
         jPanel18.setLayout(jPanel18Layout);
@@ -706,7 +706,7 @@ public class Rme2 extends javax.swing.JInternalFrame {
         jPanel22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel25.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jLabel25.setText("C√âDULAS ANTIGAS");
+        jLabel25.setText("C…DULAS ANTIGAS");
 
         javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
         jPanel22.setLayout(jPanel22Layout);
@@ -814,7 +814,7 @@ public class Rme2 extends javax.swing.JInternalFrame {
         jPanel72.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel32.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jLabel32.setText("POL√çMERO");
+        jLabel32.setText("POLÕMERO");
 
         javax.swing.GroupLayout jPanel72Layout = new javax.swing.GroupLayout(jPanel72);
         jPanel72.setLayout(jPanel72Layout);
@@ -1963,7 +1963,7 @@ public class Rme2 extends javax.swing.JInternalFrame {
         jPanel25.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel28.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel28.setText("CARIMBO / VISTO - LOT√âRICO");
+        jLabel28.setText("CARIMBO / VISTO - LOT…RICO");
 
         javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
         jPanel25.setLayout(jPanel25Layout);
